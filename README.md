@@ -1,4 +1,4 @@
-📈 Coffee Shop Sales Analysis using Power Bi and My SQL
+📈 Sales Forecasting using Power Bi and My SQL
 
 📌Project Overview
 This end-to-end Coffee Shop Sales Analysis project demonstrates how raw transactional data can be transformed into meaningful business insights using MySQL for data preparation and Power BI for interactive visualization. The dataset contains sales, orders, and product-level information from a coffee shop. The project focuses on cleaning and organizing the raw data using SQL and building a fully interactive dashboard in Power BI to support business decision-making.
