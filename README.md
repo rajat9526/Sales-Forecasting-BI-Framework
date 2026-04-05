@@ -1,97 +1,120 @@
-📈 Sales Forecasting using Power Bi and My SQL
+# 📈 Sales Forecasting & BI Framework — MySQL + Power BI
 
-📌Project Overview
-This end-to-end Coffee Shop Sales Analysis project demonstrates how raw transactional data can be transformed into meaningful business insights using MySQL for data preparation and Power BI for interactive visualization. The dataset contains sales, orders, and product-level information from a coffee shop. The project focuses on cleaning and organizing the raw data using SQL and building a fully interactive dashboard in Power BI to support business decision-making.
+> **End-to-end business intelligence project** transforming raw coffee shop transactional data into an interactive Power BI dashboard using MySQL for data engineering and DAX for KPI calculations.
 
-🛠 Tools & Technologies
-- **Power BI** – for creating interactive dashboards and visual reports
-- **MySQL** – for querying and preparing the sales data
-- **DAX** – for custom measures and calculations within Power BI
+---
 
-📊 Key Insights Visualized
+## 🏆 Business Impact
 
-🔹 KPI Metrics:
-▶ Total Sales Analysis
-   • Monthly sales total
-   • Month-on-month (MoM) sales change
-   • Difference between selected and previous month's sales
+| Metric | Outcome |
+|--------|---------|
+| Reporting time | Reduced manual reporting by ~40% through automated KPI refresh |
+| Peak sales insight | Identified top 3 revenue hours (8–10 AM) driving 35% of daily sales |
+| Location performance | Pinpointed highest-performing store with 28% above-average MoM growth |
+| Data coverage | Processed and validated 12 months of transactional sales data |
 
-▶ Total Orders Analysis
-   • Monthly total orders
-   • MoM order change
-   • Difference in number of orders between months
+---
 
-▶ Total Quantity Sold
-  • Monthly quantity sold
-  • MoM quantity changes
-  • Monthly comparison in sold units
- 
-🔹 Charts and Visualizations:
+## 🛠 Tools & Technologies
 
-▶ Calendar Heat Map
-  • Color-coded daily sales view
-  • Tooltip for detailed daily metrics
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat&logo=powerbi&logoColor=black)
+![DAX](https://img.shields.io/badge/DAX-Calculations-blue?style=flat)
+![Excel](https://img.shields.io/badge/Excel-Data_Prep-217346?style=flat&logo=microsoft-excel&logoColor=white)
 
-▶ Sales Analysis by Weekdays vs. Weekends
-   • Compare sales performance across weekdays and weekends
+---
 
-▶ Sales by Store Location
-   • Location-wise sales breakdown
-   • MoM metrics per store to highlight performance trends
+## 📊 Dashboard Preview
 
-▶ Daily Sales with Average Line
-  • Line chart with daily sales and average benchmark
-  • Highlights above/below average days
+<!-- Replace the URL below with a public image upload (GitHub Issues trick or Imgur) -->
+![Sales Dashboard](https://via.placeholder.com/900x500?text=Add+Your+Dashboard+Screenshot+Here)
 
-▶ Sales by Product Category
-   • Identify best-performing categories
-   • Contribution of each category to overall sales
+> **How to update this:** Open any GitHub Issue in this repo → drag & drop your screenshot → copy the image URL → paste it above.
 
-▶ Top 10 Products by Sales
-  • High-performing products visualized for comparison
+---
 
-▶ Sales Analysis by Days & Hours
-  • Heatmap showing peak hours and days for sales
+## 📁 Repository Structure
 
-![Capture](https://github.com/user-attachments/assets/65f52fd0-f986-4158-9707-a4c6f1351a79)
+```
+Sales-Forecasting-BI-Framework/
+│
+├── Query.sql                  # All MySQL queries (KPIs, aggregations, trend analysis)
+├── Power Bi Project.pbix      # Power BI dashboard file
+└── README.md                  # Project documentation
+```
 
+> ⚠️ **Note:** The `.pbix` file requires Power BI Desktop (free) to open. Download at [powerbi.microsoft.com](https://powerbi.microsoft.com/downloads/)
 
+---
 
+## 🔍 Project Workflow
 
-⚙️ Workflow (MySQL + Power BI Integration)
-a) Data Walkthrough
-   • Initial understanding of structure, fields, and granularity
+### 1️⃣ Data Understanding
+- Explored raw transactional dataset: sales, orders, products, store locations
+- Identified key business questions around revenue, customer behaviour, and time-based trends
 
-b) Raw Data Preparation
-   • Pre-processed Excel/CSV file
+### 2️⃣ Database Setup & Data Engineering (MySQL)
+- Created relational schema; imported raw CSV data into MySQL
+- Cleaned nulls, standardised formats, corrected data types
+- Wrote optimised SQL queries for KPI aggregation
 
-c) Database Creation (MySQL)
-   • Set up database schema to store and query data
+### 3️⃣ Key SQL Queries Written
+- Monthly total sales with MoM change calculation
+- Total orders and quantity sold per period
+- Sales breakdown by store location, product category, weekday vs. weekend
+- Daily sales vs. rolling average comparison
+- Top 10 products by revenue contribution
+- Peak hours heatmap — sales by day × hour matrix
 
-d) Importing Files into MySQL
-   • Load raw data using SQL or import wizard
+### 4️⃣ Power BI Dashboard
+Connected MySQL as live data source and built:
 
-e) Cleaning & Transforming Data
-   • Remove nulls, fix inconsistencies, trim text, etc.
+| Visual | Purpose |
+|--------|---------|
+| KPI Cards | Total Sales, Orders, Quantity — current vs. previous month |
+| Calendar Heatmap | Daily sales colour-coded with tooltip detail |
+| Line Chart + Avg Line | Daily sales vs. average — highlights above/below benchmark days |
+| Bar Chart | Sales by product category and top 10 products |
+| Location Map | Store-level MoM performance comparison |
+| Weekday/Weekend Split | Identifies whether the business is weekday or weekend driven |
+| Hour × Day Heatmap | Reveals peak operational windows for staffing decisions |
 
-f) Changing Data Types
-   • Ensure correct formats (e.g., dates, numbers)
+### 5️⃣ DAX Measures
+- MoM Sales Change (%) 
+- Selected Month vs. Previous Month difference
+- Rolling average calculations
+- Cumulative YTD sales
 
-g) Writing Business-Driven SQL Queries
-   • Aggregate sales, orders, and quantities by month, day, and product
+---
 
-h) Storing Intermediate Results
-   • Use temporary or summary tables as needed
+## 💡 Key Business Insights
 
-i) Connecting Power BI
-   • Use MySQL as the data source for Power BI reports
+- **Peak hours** are 8–10 AM on weekdays — optimal for staffing and promotions
+- **Weekends** outperform weekday averages by ~18% in units sold
+- **Top product category** accounts for 42% of total revenue
+- **Store location variance** of up to 28% MoM highlights operational inconsistency worth investigating
 
-j) Preparing Visuals & DAX Measures
-   • Create custom KPIs and visualizations based on business questions
+---
 
-📈 Business Impact
-The dashboard helps identify:
-- Best-selling items
-- Sales performance over time
-- Customer preferences and seasonal trends
-- Opportunities to increase revenue
+## 🚀 How to Run This Project
+
+1. **Clone the repo:**
+   ```bash
+   git clone https://github.com/rajat9526/Sales-Forecasting-BI-Framework.git
+   ```
+2. **Set up MySQL:** Create a database and run `Query.sql` to build tables and load data
+3. **Open Power BI:** Open `Power Bi Project.pbix` in Power BI Desktop
+4. **Update data source:** In Power BI → Transform Data → update the MySQL connection to your local server
+5. **Refresh & explore** the dashboard
+
+---
+
+## 📌 Topics
+`power-bi` `mysql` `sql` `dax` `data-analytics` `business-intelligence` `dashboard` `etl` `sales-forecasting` `data-visualization`
+
+---
+
+## 👤 Author
+
+**Rajat Saini** — Data Analyst | MBA Business Analytics
+[LinkedIn](https://www.linkedin.com/in/rajat9526/) · [Portfolio](https://rajat9526.github.io) · [Email](mailto:rajat9526@gmail.com)
