@@ -27,7 +27,7 @@
 ## 📊 Dashboard Preview
 
 <!-- Replace the URL below with a public image upload (GitHub Issues trick or Imgur) -->
-![Sales Dashboard](https://via.placeholder.com/900x500?text=Add+Your+Dashboard+Screenshot+Here)
+![Sales Dashboard](<img width="841" height="498" alt="Image" src="https://github.com/user-attachments/assets/31762bdf-209f-4859-a720-1601c9e86eaa" />)
 
 > **How to update this:** Open any GitHub Issue in this repo → drag & drop your screenshot → copy the image URL → paste it above.
 
